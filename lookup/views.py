@@ -7,7 +7,7 @@ def home(request):
 	if request.method == "POST":
 		zipcode = request.POST['zipcode']
 
-		api_request = requests.get("http://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode=" + zipcode + "&distance=5&API_KEY=24E04444-E0A5-4617-9E34-7D1C2BFF2DC0")
+		api_request = requests.get("Get your own API_KEY")
 
 		try:
 			api = json.loads(api_request.content)
@@ -39,7 +39,7 @@ def home(request):
 			'category_description': category_description, 
 			'category_color': category_color})
 	else:
-		api_request = requests.get("http://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode=89117&distance=5&API_KEY=24E04444-E0A5-4617-9E34-7D1C2BFF2DC0")
+		api_request = requests.get("Get your own API_KEY")
 
 		try:
 			api = json.loads(api_request.content)
